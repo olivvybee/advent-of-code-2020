@@ -4,7 +4,7 @@ const fs = require('fs');
 const inputFile = path.join(__dirname, 'input.txt');
 const data = fs.readFileSync(inputFile, 'utf-8');
 
-const numbers = data.split('\n').map(line => Number(line));
+const numbers = data.split('\n').map((line) => Number(line));
 
 let found = false;
 let index1 = 0;
@@ -14,8 +14,7 @@ let index3 = 2;
 while (!found) {
   if (numbers[index1] + numbers[index2] + numbers[index3] === 2020) {
     found = true;
-  }
-  else {
+  } else {
     index3 += 1;
 
     if (index3 >= numbers.length) {
