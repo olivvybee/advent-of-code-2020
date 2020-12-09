@@ -15,10 +15,7 @@ let target;
 while (index < numbers.length) {
   const valueToCheck = numbers[index];
 
-  const previous25 = [];
-  for (let i = 1; i <= 25; i++) {
-    previous25.push(numbers[index - i]);
-  }
+  const previous25 = numbers.slice(index - 25, index);
 
   const valid = previous25.some((first) =>
     previous25.some((second) => first + second === valueToCheck)
