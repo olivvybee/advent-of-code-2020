@@ -1,6 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-const { time } = require('console');
 
 const inputFile = path.join(__dirname, 'input.txt');
 const data = fs.readFileSync(inputFile, 'utf-8');
